@@ -13,7 +13,8 @@ function getTotalListValue() {
 function MakeSchedule(value) {
     let firstTag = 1;
     let tbody = document.getElementById('tbMain');
-    for (let i = 0; i < value; i++) {
+    value = parseInt(value);
+    for (let i = 0; i < value + 29; i++) {
         let row = document.createElement('tr');
         let dayCell = document.createElement('td');
         dayCell.innerHTML = `第${i + 1}天`;
@@ -66,7 +67,7 @@ function MakeSchedule(value) {
     combineReview();
 }
 
-function combineReview(){
+function combineReview() {
     let inputDom = document.getElementById("totalList");
     let value = inputDom.value;
     let cells = document.getElementById('table').rows[0].cells;

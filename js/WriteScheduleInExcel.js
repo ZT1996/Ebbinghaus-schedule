@@ -6,6 +6,7 @@ function WriteScheduleExcel() {
     <meta charset="UTF-8">
     <style>
         #table,#title{
+            display: none;
             height: 50px;
             font-size: 24px;
             text-align: center;
