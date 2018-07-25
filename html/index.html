@@ -3,38 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Making an Ebbinghaus Schedule</title>
-    <style>
-
-        #table, #title {
-            display: none;
-            height: 50px;
-            font-size: 24px;
-            text-align: center;
-        }
-        .name{
-            text-align: center;
-        }
-        p{
-            text-align: center;
-            font-size: 20px;
-        }
-        .downloadButton{
-            text-align: center;
-            font-size: 20px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
-<h1 class="name">科学的制作自己的艾宾浩斯复习表</h1>
-<p>一共需要学习的单元<input id="totalList" name="totalList" type="number" min="1">
-    <button onclick="getTotalListValue()">确定</button>
+
+<div class='webpage-name'>
+    <img src="../picture/1c5e7ba421624ca9aa5815b38ee7a1ec.PNG">
+</div>
+<p>一共需要学习的单元：<input id="totalList" name="totalList" type="text" min="1"
+                    onkeyup="this.value=this.value.replace(/[^\d]/g,'') "
+                    onafterpaste="this.value=this.value.replace(/[^\d]/g,'')">
+    <button onclick="getTotalListValue()" class="btn btn-light">确定</button>
 </p>
 <div class="downloadButton">
-    <button onclick="WriteScheduleExcel()">打印表格</button>
+    <button onclick="WriteScheduleExcel()" class="btn btn-light">打印表格</button>
 </div>
 <table id="table" width="600" border="1" cellspacing="0">
-    <caption id="title">艾宾浩斯科学复习表</caption>
+    <caption id="title">艾宾浩斯复习计划表</caption>
     <thead>
     <tr>
         <th>复习天数</th>
