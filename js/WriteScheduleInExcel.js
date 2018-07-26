@@ -11,16 +11,17 @@ function WriteScheduleExcel() {
     <meta charset="UTF-8">
     <style>
          #table {
-        display: none;
-        height: 50px;
-        font-size: 12px;
-        text-align: center;
-    }
-    #title{
-        display: none;
-        font-size: 20px;
-        text-align: center;
-    }
+            display: none;
+            height: 50px;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        #title {
+            display: none;
+            font-size: 20px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>

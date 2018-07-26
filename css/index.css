@@ -1,12 +1,32 @@
+body {
+    text-align: center;
+    background: #f7fafc;
+    overflow: hidden;
+    background: #fff;
+}
+
+.content {
+    position: absolute;
+    z-index: 1;
+    top: 25%;
+    left: 22%;
+}
+#canvas {
+    display: inline-block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
 .webpage-name {
-    margin: 20% 0 0;
     text-align: center;
 }
 
 #table {
     display: none;
     height: 50px;
-    font-size: 12px;
+    font-size: 15px;
     text-align: center;
 }
 

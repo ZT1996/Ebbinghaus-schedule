@@ -7,32 +7,34 @@
     <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
-
-<div class='webpage-name'>
-    <img src="../picture/1c5e7ba421624ca9aa5815b38ee7a1ec.PNG">
+<canvas id="canvas">
+</canvas>
+<div class="content">
+    <div class='webpage-name'>
+        <img src="../picture/ee3fbb14cfcc4103b98307b53025a94b.PNG">
+    </div>
+    <p>一共需要学习的单元：<input id="totalList" name="totalList" type="text" min="1"
+                        onkeyup="this.value=this.value.replace(/[^\d]/g,'') "
+                        onafterpaste="this.value=this.value.replace(/[^\d]/g,'')">
+        <button onclick="getTotalListValue()" class="btn btn-light">确定</button>
+    </p>
+    <div class="downloadButton">
+        <button onclick="WriteScheduleExcel()" class="btn btn-light">打印表格</button>
+    </div>
+    <table id="table" width="600" border="1" cellspacing="0">
+        <caption id="title">艾宾浩斯复习计划表</caption>
+        <thead>
+        <tr>
+            <th>复习天数</th>
+            <th>初次记忆</th>
+            <th id="review">复习内容</th>
+        </tr>
+        </thead>
+        <tbody id="tbMain"></tbody>
+    </table>
 </div>
-<p>一共需要学习的单元：<input id="totalList" name="totalList" type="text" min="1"
-                    onkeyup="this.value=this.value.replace(/[^\d]/g,'') "
-                    onafterpaste="this.value=this.value.replace(/[^\d]/g,'')">
-    <button onclick="getTotalListValue()" class="btn btn-light">确定</button>
-</p>
-<div class="downloadButton">
-    <button onclick="WriteScheduleExcel()" class="btn btn-light">打印表格</button>
-</div>
-<table id="table" width="600" border="1" cellspacing="0">
-    <caption id="title">艾宾浩斯复习计划表</caption>
-    <thead>
-    <tr>
-        <th>复习天数</th>
-        <th>初次记忆</th>
-        <th id="review">复习内容</th>
-    </tr>
-    </thead>
-    <tbody id="tbMain"></tbody>
-</table>
-<script src="../js/SaveEbbinghausSchedule.js">
-</script>
-<script src="../js/WriteScheduleInExcel.js">
-</script>
+<script src="../js/SaveEbbinghausSchedule.js"></script>
+<script src="../js/WriteScheduleInExcel.js"></script>
+<script src="../js/background.js"></script>
 </body>
 </html>
